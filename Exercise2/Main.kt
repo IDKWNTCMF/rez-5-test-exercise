@@ -12,7 +12,6 @@ fun main() {
                 refs[lst[0]] = lst[3]
             }
         }
-        parsedInput.forEach { println(it) }
         parsedInput.forEach { lst ->
             if (lst.size >= 3 && lst[1] == "invokevirtual") {
                 val refToClass = refs[lst[2]]?.split(".")?.get(0) ?: throw FileFormatException()
